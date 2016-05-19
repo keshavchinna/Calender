@@ -34,7 +34,7 @@
               start: start,
               end: end
             };
-            $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+            $('#calendar').fullCalendar('renderEvent', eventData, true);
           }
           $('#calendar').fullCalendar('unselect');
         },
@@ -137,8 +137,13 @@
             className: 'eC2'
           }
         ]
+      });
+      $('#date').click(function () {
+        console.log('date clicked')
       })
-      ;
+      $('#date').on('change', function () {
+        $('#calendar').fullCalendar('gotoDate', $('#date').val());
+      })
     });
   </script>
   <style>
@@ -158,7 +163,7 @@
   </style>
 </head>
 <body>
-
+<input type="date" name="date" id="date"/>
 <div id='calendar'></div>
 
 </body>
