@@ -138,9 +138,6 @@
           }
         ]
       });
-      $('#date').click(function () {
-        console.log('date clicked')
-      })
       $('#date').on('change', function () {
         $('#calendar').fullCalendar('gotoDate', $('#date').val());
       })
