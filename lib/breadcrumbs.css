@@ -1,0 +1,60 @@
+.breadcrumbs > * {
+  color: #313131;
+  float: left;
+  line-height: .6875rem;
+  margin: 0;
+  text-transform: uppercase
+}
+
+.breadcrumbs > :focus a, .breadcrumbs > :hover a {
+  /*text-decoration: underline*/
+}
+
+.breadcrumbs > .current-crumb:focus, .breadcrumbs > .current-crumb:hover, .breadcrumbs > .current-crumb:hover a, .breadcrumbs > .current:focus a, .property_details, .scrollToTop, .scrollToTop:hover {
+  text-decoration: none
+}
+
+.breadcrumbs > * a {
+  color: #707070
+}
+
+.breadcrumbs > .current-crumb, .breadcrumbs > .current-crumb a {
+  color: #333;
+  cursor: default
+}
+
+.breadcrumbs > .unavailable, .breadcrumbs > .unavailable a {
+  color: #999
+}
+
+.breadcrumbs > .unavailable a:focus, .breadcrumbs > .unavailable:focus, .breadcrumbs > .unavailable:hover, .breadcrumbs > .unavailable:hover a {
+  color: #31409f !important;
+  cursor: not-allowed;
+  text-decoration: none
+}
+
+.breadcrumbs > :before {
+  color: #313131;
+  content: ">";
+  margin: 0 .75rem;
+  position: relative;
+  bottom: 1px
+}
+
+.breadcrumbs > :first-child:before {
+  content: " ";
+  margin: 0
+}
+
+[aria-label=breadcrumbs] [aria-hidden=true]:after {
+  content: "/"
+}
+.breadcrumbs {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+  margin-top: 0 !important;
+  padding: 24px 0 0;
+  min-height: 35px
+}

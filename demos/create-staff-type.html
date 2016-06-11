@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
+  <meta name="viewport" content="initial-scale=1">
+  <link rel="stylesheet" href="../../assets/css/bootstrap/bootstrap.css"/>
+  <link rel="stylesheet" href="../../assets/font/fontawsome/css/font-awesome.css"/>
+  <link type="text/css" rel="stylesheet" href="../../assets/css/header-footer.css">
+  <link type="text/css" rel="stylesheet" href="../../assets/css/colours.css">
+  <link type="text/css" rel="stylesheet" href="../../assets/css/common.css">
+  <link type="text/css" rel="stylesheet" href="../../assets/css/style.css">
+  <link type="text/css" rel="stylesheet" href="../../assets/css/breadcrumbs.css">
+  <link type="text/css" rel="stylesheet" href="../../assets/css/media-query.css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+  <link
+      href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,300,100italic,100,400italic,600,600italic,700,700italic'
+      rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-2.2.1.js" ;
+          integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <title>create staff type</title>
+</head>
+<body>
+
+<header class="navbar navbar-default header-color header-margin-0 border-radius-0">
+  <div class="container ">
+    <div class="row header-height ">
+      <div class="col-md-6 padding-l-r-0 commn-padding ">
+        <div class="navbar-header burger-btn">
+          <button type="button" class="navbar-toggle pull-left out-line-none
+                header-color border-0 burger-btn" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bg-white"></span>
+            <span class="icon-bar bg-white"></span>
+            <span class="icon-bar bg-white"></span>
+          </button>
+          <h3 class="logo">SUBHA&nbsp;<span class="cc-logo">CCC</span></h3>
+        </div>
+      </div>
+      <div class="col-md-6 padding-doctor ">
+        <!--<p>Srinivas Chakravarthi<br>Doctor</p>-->
+        <div class="dropdown pull-right doctor-adj">
+          <button class="btn  dropdown-toggle doctor-btn out-line-none" type="button" data-toggle="dropdown"
+                  aria-expanded="false">
+                <span><span class="pull-left text-white doctor">Srinivas Chakravarthi<br><span
+                    class="pull-right">Administrator</span></span>
+                <img src="../../assets/images/avtar.png" class="doctor-avtar pull-right">
+                <i class="fa fa-caret-down caret-icon" aria-hidden="true"></i></span>
+          </button>
+          <ul class="dropdown-menu dropdown-style" role="menu" aria-labelledby="menu1">
+            <li role="presentation" class="out-line-none out-line-none ">
+              <a class="div-style purple-color" role="menuitem" href="admin-profile.html">
+                <i class="fa fa-user padding-right-8 " aria-hidden="true"></i>
+                My Profile</a></li>
+            <li role="presentation" class="divider d-line out-line-none"></li>
+            <li role="presentation"><a class="p-profile out-line-none purple-color" role="menuitem"
+                                       href="../account-management/change-password.html">
+              <i class="fa fa-lock padding-right-8" aria-hidden="true"></i>
+              Change Password</a></li>
+            <li role="presentation" class="divider d-line out-line-none"></li>
+            <li role="presentation"><a class="p-profile out-line-none purple-color" role="menuitem" href="#">
+              <i class="fa fa-sign-out padding-right-8" aria-hidden="true"></i>
+              Logout</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-default nav-style header-margin-0 border-radius-0">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+    <div class="container padding-l-r-0">
+      <div class="row margin-left-0">
+        <div class="col-md-6">
+          <ul class="breadcrumbs" style="font-size:14px; font-weight:600;">
+              
+            <li><a class="no-txt-decoration patient-hover" href="dashboard.html">Home</a></li>
+              
+            <li class="no-txt-decoration">Settings</li>
+          </ul>
+
+        </div>
+        <div class="col-md-6">
+          <ul class="nav navbar-nav pull-right nav-media">
+            <li><a class="font-weight-600 font-size-16 patient-hover" href="#">Insights</a></li>
+            <li><a class="font-weight-600 font-size-16 patient-hover" href="dashboard-reports-earning.html">Reports</a></li>
+            <li><a class="font-weight-600 font-size-16 patient-hover" href="#">Calender</a></li>
+            <li><a class="font-weight-600 font-size-16 patient-hover nav-active" href="#">Settings</a></li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</nav>
+<div class="container">
+  <div class="common-portion-type  box-shadow margin-top-30">
+    <div class=" border-radius-0 main-body ">
+      <h4 class="margin-bottom-20 purple-color">Encounter Types</h4>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-1">
+            <p class="text-center para-padding font-weight-600 purple-color">
+              <a data-toggle="modal" data-target="#myModal" class="purple-color patient-hover out-line-none">+ Add new encounter
+                type</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3" >
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+            <!--edit encounter type-->
+            <!--<div id="popover-edit-enctr" class="hide">-->
+            <!--<a  data-toggle="modal" data-target="#myModal-3">-->
+            <!--<i class="fa fa-edit padding-5"></i>-->
+            <!--Edit-->
+            <!--</a>-->
+            <!--<hr class="margin-0">-->
+
+            <!--<a >-->
+            <!--<i class="fa fa-ban padding-5"></i>-->
+            <!--<span class="padding-right-5">Suspend</span>-->
+            <!--</a>-->
+            <!--</div>-->
+
+            <p class="purple-color"><b>Chemeotherapy</b></p>
+
+            <p>5-FU (Fluorouracil), given along with leucovorin (folonic acid)</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3">
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Radiation Therapy</b></p>
+
+            <p>Abreviated RT, RTx or XRT, projected using ionizing radiation</p>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3">
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Chemeotherapy</b></p>
+
+            <p>5-FU (Fluorouracil), given along with leucovorin (folonic acid)</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3">
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Chemeotherapy</b></p>
+
+            <p>5-FU (Fluorouracil), given along with leucovorin (folonic acid)</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3">
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Radiation Therapy</b></p>
+
+            <p>Abreviated RT, RTx or XRT, projected using ionizing radiation</p>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-3">
+              <i class="fa fa-cog setting-icon encounter" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Chemeotherapy</b></p>
+
+            <p>5-FU (Fluorouracil), given along with leucovorin (folonic acid)</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="common-portion-type  box-shadow margin-top-30">
+    <div class=" border-radius-0 main-body padding-top-0">
+      <h4 class="margin-bottom-20 purple-color">Medical Staff Type</h4>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-1">
+            <p class="text-center para-padding font-weight-600">
+              <a href="#" class="purple-color patient-hover out-line-none" data-toggle="modal" data-target="#myModal-1" >+ Add new staff type</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+            <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Surgeon | Medical</b></p>
+
+            <p>Pre-Surgery, Surgery, Post-Surgery Procedures</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Lab Assistant | Radio Therapy</b></p>
+
+            <p>Diagnostics tests</p>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Pharmasitic | Non-Medical</b></p>
+
+            <p>Pharmacy Management</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+
+            <p class="purple-color"><b>Front-Desk | Non-Medical</b></p>
+
+            <p>Create Encounter, Create Patients, Manage Encounter assignments</p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="common-portion-type  box-shadow margin-top-30">
+    <div class=" border-radius-0 main-body padding-top-0">
+      <h4 class="margin-bottom-20 purple-color">Non Medical staff Type </h4>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-1">
+            <p class="text-center para-padding font-weight-600">
+              <a href="#" class="purple-color patient-hover out-line-none" data-toggle="modal" data-target="#myModal-1" >+ Add new staff type</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Surgeon | Medical</b></p>
+
+            <p>Pre-Surgery, Surgery, Post-Surgery Procedures</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Lab Assistant | Radio Therapy</b></p>
+
+            <p>Diagnostics tests</p>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+            <p class="purple-color"><b>Pharmasitic | Non-Medical</b></p>
+
+            <p>Pharmacy Management</p>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card-1 padding-25 ">
+            <a data-toggle="modal" data-target="#myModal-2" >
+              <i class="fa fa-cog setting-icon staff" aria-hidden="true"></i></a>
+
+
+            <p class="purple-color"><b>Front-Desk | Non-Medical</b></p>
+
+            <p>Create Encounter, Create Patients, Manage Encounter assignments</p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="navbar navbar-default text-center footer-style footer-color">
+  <p class="text-muted small logo-footer">&copy Subha Comprehencive Cancer Care</p>
+</footer>
+
+<!--modal pop-up add new encounter type-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+     data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-common">
+
+      <div class="modal-body">
+        <button type="button" class="close close-opacity out-line-none" data-dismiss="modal" aria-label="Close">
+          <span class="btn-close encounter-close" aria-hidden="true">&times;</span></button>
+        <h4 class="purple-color">Add New Encounter Type</h4>
+        <hr class="margin-top-10 margin-bottom-10">
+
+        <div class="text-center">
+
+          <label class="font-weight-600 pull-left">Encounter Type Name</label>
+          <input type="text" class="modal-input-text out-line-none border-radis margin-bottom-0"
+                 placeholder="Encounter Type Name">
+          <br>
+          <br>
+          <textarea class="text-area-modal out-line-none border-radis margin-bottom-0" placeholder="Role Description"
+                    rows="4"></textarea>
+          <button class="modal-button out-line-none btn-fd">
+            Create
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<!--edit encounter type-->
+<div class="modal fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+     data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-common">
+
+      <div class="modal-body">
+        <button type="button" class="close close-opacity out-line-none" data-dismiss="modal" aria-label="Close">
+          <span class="btn-close encounter-close" aria-hidden="true">&times;</span></button>
+        <h4 class="purple-color">Edit Encounter Type</h4>
+        <hr class="margin-top-10 margin-bottom-10">
+
+        <div class="text-center">
+
+          <label class="font-weight-600 pull-left">Encounter Type Name</label>
+          <input type="text" class="modal-input-text out-line-none border-radis margin-bottom-0"
+                 value="Stem Cel Trasplat">
+          <br>
+          <br>
+          <textarea class="text-area-modal out-line-none border-radis margin-bottom-0" rows="4"></textarea>
+          <button class="modal-button out-line-none btn-fd">
+            Update
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<!--add new staff type-->
+<!--<div class="modal fade" id="myModal-" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"-->
+     <!--data-keyboard="false">-->
+  <!--<div class="modal-dialog" role="document">-->
+    <!--<div class="modal-content-common">-->
+
+      <!--<div class="modal-body">-->
+        <!--<button type="button" class="close close-opacity out-line-none" data-dismiss="modal" aria-label="Close">-->
+          <!--<span class="btn-close encounter-close" aria-hidden="true">&times;</span></button>-->
+        <!--<h4 class="purple-color">Add New Encounter Typejnswfdcnuw</h4>-->
+        <!--<hr class="margin-top-10 margin-bottom-10">-->
+
+        <!--<div class="text-center">-->
+
+          <!--<label class="font-weight-600 pull-left">Encounter Type Name</label>-->
+          <!--<input type="text" class="modal-input-text out-line-none border-radis margin-bottom-0"-->
+                 <!--placeholder="Encounter Type Name">-->
+          <!--<br>-->
+          <!--<br>-->
+          <!--<textarea class="text-area-modal out-line-none border-radis margin-bottom-0" placeholder="Role Description"-->
+                    <!--rows="4"></textarea>-->
+          <!--<button class="modal-button out-line-none btn-fd">-->
+            <!--Create-->
+          <!--</button>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+    <!--</div>-->
+
+
+  <!--</div>-->
+<!--</div>-->
+<!--closed here-->
+
+
+
+<!--creat staff pop-up-->
+<!--<div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"-->
+<!--data-keyboard="false">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content-common">-->
+
+<!--<div class="modal-body">-->
+<!--<button type="button" class="close close-opacity out-line-none " data-dismiss="modal" aria-label="Close">-->
+<!--<span class="btn-close" aria-hidden="true">&times;</span></button>-->
+<!--<h4>Create Staff Type</h4>-->
+<!--<br>-->
+<!--<div class="text-center">-->
+
+<!--<div class="row">-->
+<!--<div class="col-md-6">-->
+<!--<select class="out-line-none staff-pop">-->
+<!--<option value="">Medical / Non-Medical</option>-->
+<!--<option value="">1</option>-->
+<!--<option value="">2</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<select class="out-line-none staff-pop">-->
+<!--<option value="">Staff Type</option>-->
+<!--<option value="">1</option>-->
+<!--<option value="">2</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<textarea class="text-area-modal out-line-none" placeholder="Description" rows="4"></textarea>-->
+<!--<br>-->
+<!--<br>-->
+<!--<button class="modal-button out-line-none">-->
+<!--Create-->
+<!--</button>-->
+<!--</div>-->
+
+<!--</div>-->
+
+<!--</div>-->
+
+
+<!--</div>-->
+<!--</div>-->
+
+<!--edit staf type-->
+
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+     data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-common">
+
+      <div class="modal-body">
+        <button type="button" class="close close-opacity out-line-none" data-dismiss="modal" aria-label="Close">
+          <span class="btn-close encounter-close" aria-hidden="true">&times;</span></button>
+        <h4 class="purple-color">Edit Staff Type</h4>
+        <hr class="margin-top-10 margin-bottom-10">
+
+        <div class="text-center">
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="pull-left">Staff Type</label>
+              <select class="out-line-none staff-pop border-radis border-ccc dropdown-icon">
+                <option value="">Medical</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="pull-left">Staff Type Name</label>
+              <input type="text" class="staff-pop out-line-none border-radis border-ccc" value="Sergeon">
+            </div>
+          </div>
+          <br>
+          <textarea class="text-area-modal out-line-none border-radis" placeholder=""rows="4"></textarea>
+          <button class="modal-button out-line-none margin-top-0 margin-bottom-0 btn-fd">
+            Update
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+<!--add staff type-->
+<div class="modal fade" id="myModal-1" tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+     data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-common">
+
+      <div class="modal-body">
+        <button type="button" class="close close-opacity out-line-none" data-dismiss="modal" aria-label="Close">
+          <span class="btn-close encounter-close" aria-hidden="true">&times;</span></button>
+        <h4 class="purple-color">Add New Staff Type</h4>
+        <hr class="margin-top-10 margin-bottom-10">
+
+        <div class="text-center">
+
+          <div class="row">
+            <div class="col-md-6">
+              <label class="pull-left">Staff Type</label>
+              <select class="out-line-none staff-pop border-radis border-ccc dropdown-icon">
+                <option value="">Medical</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="pull-left">Staff Type Name</label>
+              <input type="text" class="staff-pop out-line-none border-radis border-ccc" placeholder="Staff Type Name">
+            </div>
+          </div>
+          <br>
+          <textarea class="text-area-modal out-line-none border-radis" placeholder="Medical Procedures"rows="4"></textarea>
+          <button class="modal-button out-line-none margin-top-0 margin-bottom-0 btn-fd">
+            Save
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+  $('[data-toggle=popover]').popover({
+    html: true,
+
+    content: function () {
+      return $('#popover-setting').html();
+    }
+
+  });
+
+</script>
+<!--<script>-->
+<!--$('.encounter').popover({-->
+<!--html: true,-->
+<!--trigger: 'focus',-->
+<!--content: function () {-->
+<!--return $('#popover-edit-enctr').html();-->
+<!--},-->
+<!--delay: {-->
+<!--show: 50,-->
+<!--hide: 50-->
+<!--}-->
+
+<!--});-->
+
+<!--</script>-->
+
+</body>
+</html>
