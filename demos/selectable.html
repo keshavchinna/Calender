@@ -61,7 +61,6 @@
               <i class="fa fa-sign-out padding-right-8" aria-hidden="true"></i>
               Logout</a></li>
           </ul>
-
         </div>
       </div>
     </div>
@@ -74,12 +73,9 @@
       <div class="row margin-left-0">
         <div class="col-md-6">
           <ul class="breadcrumbs" style="font-size:14px; font-weight:600;">
-              
             <li><a class="no-txt-decoration patient-hover" href="dashboard.html">Home</a></li>
-              
             <li class="no-txt-decoration">Settings</li>
           </ul>
-
         </div>
         <div class="col-md-6">
           <ul class="nav navbar-nav pull-right nav-media">
@@ -89,19 +85,16 @@
             <li><a class="font-weight-600 font-size-16 patient-hover" href="#">Calender</a></li>
             <li><a class="font-weight-600 font-size-16 patient-hover nav-active" href="#">Settings</a></li>
           </ul>
-
-
         </div>
       </div>
     </div>
   </div>
-
 </nav>
-<input type="date" name="date" id="date"/>
-<button>Submit</button>
-<div class="container margin-bottom-50">
+
+<div class="container margin-bottom-50 container-padd-staff-detials">
   <div id='calendar'></div>
 </div>
+
 <!--event creation model-->
 <div class="modal fade" id="myModal-1" tabindex="-1"
      role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
@@ -143,9 +136,7 @@
   <p class="text-muted small logo-footer">&copy Subha Comprehencive Cancer Care</p>
 </footer>
 <script>
-
   $(document).ready(function () {
-
     $('#calendar').fullCalendar({
       header: {
         left: 'prev,next today',
